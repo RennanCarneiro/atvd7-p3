@@ -4,31 +4,27 @@ public class Post {
     public int numeroCurtidas;
     public int numeroCompartilhamentos;
 
-
-    public Post (String texto, String link){
+    public Post(String texto, String link) {
         this.texto = texto;
         this.link = link;
+        this.numeroCurtidas = 0;
+        this.numeroCompartilhamentos = 0;
     }
 
-    public String getTexto() {
-        return texto;
-    }
-    public void setTexto(String texto) {
-        this.texto = texto;
+    public int curtidas(int curtir) {
+        return this.numeroCurtidas += curtir;
     }
 
-    public String getLink() {
-        return link;
+    public int compartilhamentos(int compartilhados) {
+        return this.numeroCompartilhamentos += compartilhados;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public int getNumeroCurtidas() {
+        return this.numeroCurtidas;
     }
 
-    public void curtir(int curtir){
-        numeroCurtidas += curtir;
+    public int getNumeroCompartilhamentos() {
+        return this.numeroCompartilhamentos;
     }
-    public void compartilhar(int compartilhar){
-        numeroCompartilhamentos += compartilhar;
-    }
+
 }
